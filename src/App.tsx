@@ -2,15 +2,20 @@ import React from 'react'
 import Header from './components/Header'
 import { Router } from '@reach/router'
 import Home from './pages/Home'
+import Sidebar from './components/Sidebar'
+import { Flex } from 'rebass'
 
 const App: React.FC = () => {
   return (
-    <div className='App'>
+    <>
       <Header />
-      <Router>
-        <Home path='/' />
-      </Router>
-    </div>
+      <Flex>
+        <Sidebar />
+        <Router>
+          <Home path='/' />
+        </Router>
+      </Flex>
+    </>
   )
 }
 
