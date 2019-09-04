@@ -1,9 +1,15 @@
 import React from 'react'
+import Header from './components/Header'
+import { Router } from '@reach/router'
+import Home from './pages/Home'
 
 const App: React.FC = () => {
   return (
     <div className='App'>
-      <h1>Admin App</h1>
+      <Header />
+      <Router>
+        <Home path='/' />
+      </Router>
     </div>
   )
 }
